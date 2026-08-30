@@ -1,0 +1,17 @@
+{
+  "name": "@ores-chat-test/public-chat-e2e",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Playwright acceptance tests for production and isolated test-org public chat sites.",
+  "scripts": {
+    "test": "playwright test",
+    "check": "npm test"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.62.1"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}
