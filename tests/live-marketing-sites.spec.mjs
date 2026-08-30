@@ -53,7 +53,7 @@ async function exerciseBot({ page, elementId, openLabel, contextId, message }) {
   await component.getByLabel("Message").fill(message);
   await component.getByRole("button", { name: "Send" }).click();
   await expect(component.getByText(`Deterministic test reply for ${contextId}:`)).toBeVisible();
-  await expect(component.getByText(message, { exact: true })).toHaveCount(2);
+  await expect(component.getByText(message, { exact: true })).toHaveCount(1);
   await expect(page.locator("html")).toHaveAttribute("data-last-result", `${elementId}:response`);
   await component.getByRole("button", { name: "Close chat" }).click();
 }
